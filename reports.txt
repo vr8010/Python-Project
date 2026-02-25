@@ -1,0 +1,46 @@
+
+==================================================
+DIGITAL FOOTPRINT RISK ANALYSIS REPORT
+Timestamp: 2026-02-25 17:00:40
+==================================================
+
+RISK BREAKDOWN:
+ Password Risk:        8/25
+ Email Risk:           0/15
+ Username Risk:        0/15
+ Privacy Risk:         15/15
+ Behavior Risk:        10/10
+ Breach Simulation:    0/20
+
+TOTAL DIGITAL RISK SCORE: 33/100
+RISK LEVEL: MODERATE ⚠️
+
+RECOMMENDATIONS:
+ - Avoid password reuse across different sites
+ - Limit public exposure of personal information (DOB, phone)
+ - Avoid clicking on unknown or suspicious links
+ - Use VPN when connecting to public WiFi networks
+
+==================================================
+
+
+==================================================
+DIGITAL FOOTPRINT RISK ANALYSIS REPORT
+Timestamp: 2026-02-25 17:02:35
+==================================================
+
+RISK BREAKDOWN:
+ Password Risk:        8/25
+ Email Risk:           0/15
+ Username Risk:        0/15
+ Privacy Risk:         0/15
+ Behavior Risk:        0/10
+ Breach Simulation:    0/20
+
+TOTAL DIGITAL RISK SCORE: 8/100
+RISK LEVEL: LOW ✅
+
+RECOMMENDATIONS:
+
+==================================================
+
