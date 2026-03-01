@@ -1,6 +1,11 @@
 # Digital Footprint Risk Analyzer
 
 A console-based Python application that analyzes digital habits and calculates a Digital Risk Score (0-100) based on multiple exposure factors.
+## Project Architecture
+
+## 📊 Flowchart
+
+![Flowchart](flowchart.png)
 
 ## Features
 
