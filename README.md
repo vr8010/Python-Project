@@ -5,7 +5,7 @@ A console-based Python application that analyzes digital habits and calculates a
 
 ## 📊 Flowchart
 
-![Flowchart](flowchart.png)
+![Flowchart](Flowchart.png)
 
 ## Features
 
