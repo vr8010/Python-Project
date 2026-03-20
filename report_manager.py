@@ -44,6 +44,40 @@ RECOMMENDATIONS:
         with open(self.filename, 'a', encoding='utf-8') as f:
             f.write(report_text)
     
+    def get_reports_list(self):
+        """Return reports as a list of dicts for the API"""
+        if not os.path.exists(self.filename):
+            return []
+        reports = []
+        current = {}
+        with open(self.filename, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line.startswith('Timestamp:'):
+                    current['timestamp'] = line.replace('Timestamp:', '').strip()
+                elif 'Password Risk:' in line:
+                    current['password_risk'] = line.split(':')[1].strip()
+                elif 'Email Risk:' in line:
+                    current['email_risk'] = line.split(':')[1].strip()
+                elif 'Username Risk:' in line:
+                    current['username_risk'] = line.split(':')[1].strip()
+                elif 'Privacy Risk:' in line:
+                    current['privacy_risk'] = line.split(':')[1].strip()
+                elif 'Behavior Risk:' in line:
+                    current['behavior_risk'] = line.split(':')[1].strip()
+                elif 'Breach Simulation:' in line:
+                    current['breach_risk'] = line.split(':')[1].strip()
+                elif 'TOTAL DIGITAL RISK SCORE:' in line:
+                    current['total_score'] = line.split(':')[1].strip()
+                elif 'RISK LEVEL:' in line:
+                    current['risk_level'] = line.split(':')[1].strip()
+                elif line.startswith('- '):
+                    current.setdefault('recommendations', []).append(line[2:])
+                elif line.startswith('=' * 10) and current.get('timestamp'):
+                    reports.append(current)
+                    current = {}
+        return list(reversed(reports))
+
     def display_reports(self):
         """Display all previous reports"""
         if not os.path.exists(self.filename):

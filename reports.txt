@@ -44,3 +44,76 @@ RECOMMENDATIONS:
 
 ==================================================
 
+
+==================================================
+DIGITAL FOOTPRINT RISK ANALYSIS REPORT
+Timestamp: 2026-02-26 11:44:43
+==================================================
+
+RISK BREAKDOWN:
+ Password Risk:        8/25
+ Email Risk:           0/15
+ Username Risk:        0/15
+ Privacy Risk:         4/15
+ Behavior Risk:        7/10
+ Breach Simulation:    0/20
+
+TOTAL DIGITAL RISK SCORE: 19/100
+RISK LEVEL: LOW ✅
+
+RECOMMENDATIONS:
+ - Avoid password reuse across different sites
+ - Limit public exposure of personal information (DOB, phone)
+ - Use VPN when connecting to public WiFi networks
+
+==================================================
+
+
+==================================================
+DIGITAL FOOTPRINT RISK ANALYSIS REPORT
+Timestamp: 2026-03-20 14:24:51
+==================================================
+
+RISK BREAKDOWN:
+ Password Risk:        13/25
+ Email Risk:           4/15
+ Username Risk:        0/15
+ Privacy Risk:         4/15
+ Behavior Risk:        0/10
+ Breach Simulation:    0/20
+
+TOTAL DIGITAL RISK SCORE: 21/100
+RISK LEVEL: LOW ✅
+
+RECOMMENDATIONS:
+ - Increase password complexity (use uppercase, lowercase, numbers, special chars)
+ - Limit public exposure of personal information (DOB, phone)
+
+==================================================
+
+
+==================================================
+DIGITAL FOOTPRINT RISK ANALYSIS REPORT
+Timestamp: 2026-03-20 16:07:20
+==================================================
+
+RISK BREAKDOWN:
+ Password Risk:        13/25
+ Email Risk:           4/15
+ Username Risk:        0/15
+ Privacy Risk:         15/15
+ Behavior Risk:        10/10
+ Breach Simulation:    0/20
+
+TOTAL DIGITAL RISK SCORE: 42/100
+RISK LEVEL: MODERATE ⚠️
+
+RECOMMENDATIONS:
+ - Increase password complexity (use uppercase, lowercase, numbers, special chars)
+ - Avoid password reuse across different sites
+ - Limit public exposure of personal information (DOB, phone)
+ - Avoid clicking on unknown or suspicious links
+ - Use VPN when connecting to public WiFi networks
+
+==================================================
+

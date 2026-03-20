@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Footprint Risk Analyzer</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Digital Footprint<span> Risk Analyzer</span></h1>
+    <p>Analyze your digital exposure and calculate your personal threat risk score</p>
+  </div>
+
+  <div class="container">
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('analyze', this)">⚡ Analyze Risk</button>
+      <button class="tab" onclick="switchTab('reports', this)">📁 Previous Reports</button>
+    </div>
+
+    <!-- ── Analyze Tab ── -->
+    <div id="tab-analyze">
+      <form id="riskForm">
+
+        <div class="card">
+          <h2>🔐 Credentials</h2>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="your_username" required />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <div class="password-wrap">
+              <input type="password" name="password" id="passwordInput" placeholder="Enter password to evaluate" required />
+              <button type="button" class="toggle-pw" onclick="togglePassword()">👁</button>
+            </div>
+            <div class="strength-bar"><div id="strengthFill"></div></div>
+            <span id="strengthLabel" class="strength-label"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>🌐 Public Information Exposure</h2>
+          <div class="toggle-group">
+            <label class="toggle-label">
+              <span>Date of birth publicly visible?</span>
+              <input type="checkbox" name="dob_public" /><span class="slider"></span>
+            </label>
+            <label class="toggle-label">
+              <span>Phone number publicly visible?</span>
+              <input type="checkbox" name="phone_public" /><span class="slider"></span>
+            </label>
+            <label class="toggle-label">
+              <span>Home address publicly visible?</span>
+              <input type="checkbox" name="address_public" /><span class="slider"></span>
+            </label>
+            <label class="toggle-label">
+              <span>Personal email publicly visible?</span>
+              <input type="checkbox" name="email_public" /><span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>🧠 Security Behavior</h2>
+          <div class="toggle-group">
+            <label class="toggle-label">
+              <span>Reuse passwords across sites?</span>
+              <input type="checkbox" name="password_reuse" /><span class="slider"></span>
+            </label>
+            <label class="toggle-label">
+              <span>Click on unknown or suspicious links?</span>
+              <input type="checkbox" name="clicks_unknown" /><span class="slider"></span>
+            </label>
+            <label class="toggle-label">
+              <span>Frequently use public WiFi?</span>
+              <input type="checkbox" name="public_wifi" /><span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-analyze">Run Threat Analysis</button>
+      </form>
+
+      <!-- Results -->
+      <div id="results" class="hidden">
+        <div class="card results-card">
+          <h2>📊 Threat Assessment Report</h2>
+
+          <div class="score-circle-wrap">
+            <svg viewBox="0 0 120 120" class="score-circle">
+              <circle cx="60" cy="60" r="52" class="circle-bg"/>
+              <circle cx="60" cy="60" r="52" class="circle-fill" id="circleArc"/>
+            </svg>
+            <div class="score-text">
+              <span id="totalScore">0</span>
+              <small>/100</small>
+            </div>
+          </div>
+
+          <div id="riskBadge" class="risk-badge"></div>
+
+          <hr class="section-divider" />
+
+          <div class="score-bars">
+            <div class="score-row">
+              <span>Password</span>
+              <div class="bar-wrap"><div class="bar" id="bar-password"></div></div>
+              <span id="val-password" class="score-val"></span>
+            </div>
+            <div class="score-row">
+              <span>Email</span>
+              <div class="bar-wrap"><div class="bar" id="bar-email"></div></div>
+              <span id="val-email" class="score-val"></span>
+            </div>
+            <div class="score-row">
+              <span>Username</span>
+              <div class="bar-wrap"><div class="bar" id="bar-username"></div></div>
+              <span id="val-username" class="score-val"></span>
+            </div>
+            <div class="score-row">
+              <span>Privacy</span>
+              <div class="bar-wrap"><div class="bar" id="bar-privacy"></div></div>
+              <span id="val-privacy" class="score-val"></span>
+            </div>
+            <div class="score-row">
+              <span>Behavior</span>
+              <div class="bar-wrap"><div class="bar" id="bar-behavior"></div></div>
+              <span id="val-behavior" class="score-val"></span>
+            </div>
+            <div class="score-row">
+              <span>Breach Sim.</span>
+              <div class="bar-wrap"><div class="bar" id="bar-breach"></div></div>
+              <span id="val-breach" class="score-val"></span>
+            </div>
+          </div>
+
+          <div id="recommendations" class="recommendations hidden">
+            <h3>💡 Recommendations</h3>
+            <ul id="recList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Reports Tab ── -->
+    <div id="tab-reports" class="hidden">
+      <div id="reportsList"></div>
+    </div>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
