@@ -23,17 +23,25 @@ Score	Risk Level
 ### 📊 Flowchart
 
 ![Project Flowchart](Flowchart.png)
-📂 Project Structure
+## 📂 Project Structure
 ```
 Digital-Footprint-Risk-Analyzer
-│
-├── main.py                # Main application entry point
-├── risk_engine.py         # Core risk calculation engine
-├── report_manager.py      # Handles report saving & loading
-├── utils.py               # UI helper functions
-├── reports.txt            # Stored analysis reports
-│
-└── Flowchart.png          # Application architecture diagram
+
+├── backend  
+│   ├── main.py  
+│   ├── risk_engine.py  
+│   ├── report_manager.py  
+│   ├── utils.py  
+│   └── reports.txt  
+
+├── frontend  
+│   ├── index.html  
+│   └── static  
+│       ├── style.css  
+│       └── app.js  
+
+├── Flowchart.png  
+└── README.md
 ```
 ⚙️ Installation
 
