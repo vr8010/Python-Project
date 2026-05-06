@@ -4,7 +4,6 @@ Report Manager - Handles saving and viewing reports
 from datetime import datetime
 import os
 
-
 class ReportManager:
     """Manages report storage and retrieval"""
     
@@ -93,3 +92,4 @@ RECOMMENDATIONS:
                     print("\nNo previous reports found.")
         except Exception as e:
             print(f"\nError reading reports: {e}")
+
