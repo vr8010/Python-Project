@@ -3,7 +3,6 @@ Risk Engine - Core analysis logic
 """
 import re
 
-
 class RiskEngine:
     """Analyzes user data and calculates digital risk score"""
     
